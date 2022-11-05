@@ -134,9 +134,9 @@ LOGIN_REDIRECT_URL = '/dologin/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 STATIC_ROOT = 'static'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'), 
-)
+STATIC_DIR = [
+    os.path.join(str(BASE_DIR.joinpath('static')),)
+]
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
